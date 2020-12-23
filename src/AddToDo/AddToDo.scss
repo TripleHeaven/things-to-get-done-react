@@ -1,0 +1,14 @@
+html,
+body {
+  margin: 0;
+}
+body {
+  background: #e5e5e5;
+}
+.container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  flex-direction: row;
+}
