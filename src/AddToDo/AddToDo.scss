@@ -7,8 +7,18 @@ body {
 }
 .container {
   display: flex;
+  width: 350px;
+  justify-content: space-between;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
   background: #ffffff;
   flex-direction: row;
+  font-weight: 600;
+
+  span {
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
 }

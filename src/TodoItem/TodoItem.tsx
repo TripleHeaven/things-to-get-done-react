@@ -7,9 +7,14 @@ import { TodoItemT } from "../typesTS/TodoItemT";
 import TodoList from "../TodoList";
 // contain TodoItem functionality containing storing deleting etc. for clients
 export default function TodoItem({ todo }: { todo: TodoItemT }) {
-  const { todos, setTodos, completedThings, setCompletedThings } = useContext(
-    TodoContext
-  );
+  const {
+    todos,
+    setTodos,
+    completedThings,
+    setCompletedThings,
+    todosCompleted,
+    setTodosCompleted,
+  } = useContext(TodoContext);
   const toComplete = () => {
     todo.state = true;
     setCompletedThings(completedThings + 1);
@@ -26,16 +31,18 @@ export default function TodoItem({ todo }: { todo: TodoItemT }) {
     );
   };
   return (
-    <div>
+    <div className={styles.todoThing}>
       {todo.state ? (
-        <div className={styles.todoContainer}>
+        <div className={styles.todoCompletedContainer}>
           <input type="checkbox" onChange={() => toUncomplete()}></input>
+          <span className="checkmark"></span>
           <span>{todo.text}</span>
           <button onClick={() => removeTodo()}>Remove</button>
         </div>
       ) : (
         <div className={styles.todoContainer}>
           <input type="checkbox" onChange={() => toComplete()}></input>
+          <span className="checkmark"></span>
           <span>{todo.text}</span>
           <button onClick={() => removeTodo()}>Remove</button>
         </div>

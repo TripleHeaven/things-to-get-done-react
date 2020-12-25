@@ -1,8 +1,70 @@
-.listcontainer {
-  width: 900px;
-  background: gray;
-  display: flex;
-  flex-direction: row;
+.todoContainer {
+  width: 500px;
+
+  padding: 10px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 2px solid rgb(84, 123, 231);
+  font-weight: 600;
+  transition: color 2s;
+  span {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  input {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 25px;
+    height: 25px;
+  }
+}
+.todoCompletedContainer {
+  input {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 25px;
+    height: 25px;
+  }
+  width: 500px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 2px solid rgb(235, 55, 166);
+  font-weight: 600;
+  transition: color 2s;
+  span {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  input {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+button {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 2em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background-color: #4eb5f1;
+  text-align: center;
+  transition: all 0.2s;
+}
+button:hover {
+  background-color: #da2d2d;
 }
